@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """Example request to free quote api's
 
@@ -8,6 +9,8 @@ TODO:
 #https://www.python.org/dev/peps/pep-0257/
 
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 urls = { #https://github.com/public-apis/public-apis/blob/master/README.md#public-apis-
     "quotes": {
@@ -48,10 +51,10 @@ def get_user_selection(urls):
         str: This string indicates which option the user has selected
     """
     options = list(urls['quotes'].keys())
-    selection = input("Enter one of the following opitions - {}: ".format(", ".join(options)))
+    selection = input("Enter one of the following opitions - {}: ".format(", ".join(options))).lower()
     print()
-    url = urls["quotes"][selection]
     if selection in options:
+        url = urls["quotes"][selection]
         return selection, url
     else:
         print("value entered invalid")
@@ -78,7 +81,7 @@ def fetch_details(selection, rj):
     return r
 
 def main():
-    if input("Would you like to fetch a quote - y, n:") == "y":
+    if input("Would you like to fetch a quote - y, n:").lower() == "y":
         selection, url = get_user_selection(urls)
         print(fetch_details(selection, fetch_quote(url)))
         main()
@@ -98,4 +101,7 @@ notes
 ##except KeyError as e:
 ##    print(e)
 # -*- coding: utf-8 -*-
+Free iOS shell and iOS Jupyter Notebook
+- https://apps.apple.com/us/app/a-shell/id1473805438
+- https://apps.apple.com/us/app/carnets-jupyter/id1450994949
 """
