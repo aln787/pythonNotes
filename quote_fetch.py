@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Example request to free quote api's
 
@@ -36,7 +35,7 @@ def format_quote(quote, author = ""):
     """
     if None in [quote, author]:
         raise Exception("The API response for your selected category appears to me malformed.")
-    a = " -{}".format(author) if author != "" else "" 
+    a = "\n -{}\n".format(author) if author != "" else "" 
     return quote + a
 
 def get_user_selection(urls):
@@ -51,10 +50,10 @@ def get_user_selection(urls):
         str: This string indicates which option the user has selected
     """
     options = list(urls['quotes'].keys())
-    selection = input("Enter one of the following opitions - {}: ".format(", ".join(options))).lower()
+    selection = input("Enter one of the following opitions - {}: ".format(", ".join(options)))
     print()
+    url = urls["quotes"][selection]
     if selection in options:
-        url = urls["quotes"][selection]
         return selection, url
     else:
         print("value entered invalid")
@@ -81,7 +80,7 @@ def fetch_details(selection, rj):
     return r
 
 def main():
-    if input("Would you like to fetch a quote - y, n:").lower() == "y":
+    if input("Would you like to fetch a quote - y, n:") == "y":
         selection, url = get_user_selection(urls)
         print(fetch_details(selection, fetch_quote(url)))
         main()
@@ -101,7 +100,4 @@ notes
 ##except KeyError as e:
 ##    print(e)
 # -*- coding: utf-8 -*-
-Free iOS shell and iOS Jupyter Notebook
-- https://apps.apple.com/us/app/a-shell/id1473805438
-- https://apps.apple.com/us/app/carnets-jupyter/id1450994949
 """
