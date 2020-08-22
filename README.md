@@ -24,6 +24,12 @@
    ```
    - [Additional Options](https://stackoverflow.com/questions/139180/how-to-list-all-functions-in-a-python-module)
 
+#### Reload Updated Module
+```
+>>> import helpers as module
+>>> importlib.reload(module)
+```
+
 #### Builtins
 ```
 >>> import builtins

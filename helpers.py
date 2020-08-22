@@ -38,12 +38,17 @@ def smallest_divisible(x, y):
 
     return x
 
-def fibonacci(n):
+def fibonacci_sequence(n):
+    def fibonacci(y):
+        if y <= 1:
+            return y
+        else:
+            return fibonacci(y-2) + fibonacci(y-1)
     if n < 0:
-        return 'please give >=0'
-    elif n == 0:
-        return 0
-    elif n <= 2:
-        return 1
+        print('please provide a value >=0')
     else:
-        return fibonacci(n - 2) + fibonacci(n-1)
+        for i in range(n):
+            f = fibonacci(i)
+            if f <= n: print(f)
+            else: break
+
