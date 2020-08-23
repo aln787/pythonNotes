@@ -65,3 +65,9 @@ def quadratic_equation_example(a=88, b=100, c=20):
     sol2 = (-b+math.sqrt(d))/(2*a)
 
     print('The solution are {0} and {1}'.format(sol1,sol2))
+
+def current_time():
+    import time;
+    localtime = time.asctime( time.localtime(ti
+me.time()) )
+    print("Current time :", localtime)
