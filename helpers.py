@@ -53,15 +53,15 @@ def fibonacci_sequence(n):
             else: break
 
 def quadratic_equation_example(a=88, b=100, c=20):
-"""Solve the quadratic equation ax**2 + bx + c = 0"""
+    """Solve the quadratic equation ax**2 + bx + c = 0"""
 
-import math
+    import math
 
-# calculate the discriminant
-d = (b**2) - (4*a*c)
+    # calculate the discriminant
+    d = (b**2) - (4*a*c)
 
-# find two solutions
-sol1 = (-b-math.sqrt(d))/(2*a)
-sol2 = (-b+math.sqrt(d))/(2*a)
+    # find two solutions
+    sol1 = (-b-math.sqrt(d))/(2*a)
+    sol2 = (-b+math.sqrt(d))/(2*a)
 
-print('The solution are {0} and {1}'.format(sol1,sol2))
+    print('The solution are {0} and {1}'.format(sol1,sol2))
