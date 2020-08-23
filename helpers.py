@@ -52,7 +52,7 @@ def fibonacci_sequence(n):
             if f <= n: print(f)
             else: break
 
-def quadratic_equation_example(a=88, b=100, c=20)
+def quadratic_equation_example(a=88, b=100, c=20):
 """Solve the quadratic equation ax**2 + bx + c = 0"""
 
 import math
