@@ -92,6 +92,6 @@ F) for those numbers.
             return determineHCF(y,x%y)
 
     hcf = determineHCF(n, n1)
-    lcf = n*n1/hcf
+    lcm = n*n1/hcf
     print("The HCF of", n,"and", n1,"is", hcf)
-    print("The LCM of", n,"and", n1,"is",lfc)
+    print("The LCM of", n,"and", n1,"is",lcm)
