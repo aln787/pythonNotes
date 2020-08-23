@@ -71,3 +71,27 @@ def current_time():
     localtime = time.asctime( time.localtime(ti
 me.time()) )
     print("Current time :", localtime)
+
+def determineHCF_and_LCF(n=54,n1=24):
+    """All the numbers that divide a number com
+pletely, i.e., without leaving any remainder, a
+re called factors of that number.
+    
+    LCM : The least number which is exactly div
+isible by each of the given numbers is called t
+he least common multiple of those numbers. 
+    
+    HCF : The largest number that divides two o
+r more numbers is the highest common factor (HC
+F) for those numbers.
+    """
+    def determineHCF(x, y):
+        if(y == 0):
+            return x
+        else:
+            return determineHCF(y,x%y)
+
+    hcf = determineHCF(n, n1)
+    lcf = n*n1/hcf
+    print("The HCF of", n,"and", n1,"is", hcf)
+    print("The LCM of", n,"and", n1,"is",lfc)
