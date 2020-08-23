@@ -68,8 +68,7 @@ def quadratic_equation_example(a=88, b=100, c=20):
 
 def current_time():
     import time;
-    localtime = time.asctime( time.localtime(ti
-me.time()) )
+    localtime = time.asctime( time.localtime(time.time()) )
     print("Current time :", localtime)
 
 def determineHCF_and_LCF(n=54,n1=24):
