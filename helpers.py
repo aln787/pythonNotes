@@ -71,7 +71,7 @@ def current_time():
     localtime = time.asctime( time.localtime(time.time()) )
     print("Current time :", localtime)
 
-def determineHCF_and_LCF(n=54,n1=24):
+def determineHCF_and_LCM(n=54,n1=24):
     """All the numbers that divide a number com
 pletely, i.e., without leaving any remainder, a
 re called factors of that number.
